@@ -10,20 +10,24 @@ export default function UserProfile() {
   function handleChangeName() {
     setUser({ ...user, name: "Zhenya" });
   }
+
   function handeIncreaseAge() {
     setUser((user) => {
       return { ...user, age: user.age + 1 };
     });
   }
+
   function handleToggleActivity() {
     setUser((user) => ({ ...user, isActive: !user.isActive }));
   }
 
   return (
     <>
-      <h1>Имя: {user.name}</h1>
-      <h1>Возраст: {user.age}</h1>
-      <h1>Активен: {user.isActive ? "🟢" : "🔴"}</h1>
+      <h1>Профиль пользователя</h1>
+
+      <h3>Имя: {user.name}</h3>
+      <h3>Возраст: {user.age}</h3>
+      <h3>Активен: {user.isActive ? "🟢" : "🔴"}</h3>
 
       <button onClick={handleChangeName}>Сменить имя</button>
       <button onClick={handeIncreaseAge}>Увеличить возраст</button>
