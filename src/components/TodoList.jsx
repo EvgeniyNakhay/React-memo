@@ -2,6 +2,7 @@ import { useState } from "react";
 
 export default function TodoList() {
   const [tasks, setTasks] = useState(["Купить хлеб", "Погулять с собакой"]);
+
   function handleAddTask() {
     setTasks(["Выучить React", ...tasks]);
   }

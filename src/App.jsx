@@ -1,15 +1,14 @@
 import { useState } from "react";
 
 import "./App.css";
-import UserProfile from "./components/UserProfile";
 import TodoList from "./components/TodoList";
 import GoodsBasket from "./components/GoodsBasket";
-
+import UserProfile from "./components/UserProfile/UserProfile";
 function App() {
   return (
     <>
-      <GoodsBasket />
-      {/* <TodoList /> */}
+      {/* <GoodsBasket /> */}
+      <TodoList />
       {/* <UserProfile /> */}
     </>
   );

@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import UserInfo from "./UserInfo";
 export default function UserProfile() {
   const [user, setUser] = useState({
     name: "Иван",
@@ -24,11 +24,7 @@ export default function UserProfile() {
   return (
     <>
       <h1>Профиль пользователя</h1>
-
-      <h3>Имя: {user.name}</h3>
-      <h3>Возраст: {user.age}</h3>
-      <h3>Активен: {user.isActive ? "🟢" : "🔴"}</h3>
-
+      <UserInfo user={user} />
       <button onClick={handleChangeName}>Сменить имя</button>
       <button onClick={handeIncreaseAge}>Увеличить возраст</button>
       <button onClick={handleToggleActivity}>Переключить активность</button>
