@@ -1,8 +1,8 @@
 import { useState } from "react";
+import TaskItem from "./TaskItem";
 
 export default function TodoList() {
   const [tasks, setTasks] = useState(["Купить хлеб", "Погулять с собакой"]);
-
   function handleAddTask() {
     setTasks(["Выучить React", ...tasks]);
   }
@@ -20,7 +20,7 @@ export default function TodoList() {
       <button onClick={handleRemoveLastTask}>Удалить последнюю задачу</button>
       <ul>
         {tasks.map((item, index) => {
-          return <li key={index}>{item}</li>;
+          return <TaskItem key={index} task={item} />;
         })}
       </ul>
     </>
