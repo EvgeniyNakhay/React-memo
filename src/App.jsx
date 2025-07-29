@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import "./App.css";
 import TodoList from "./components/TodoList/TodoList";
-import GoodsBasket from "./components/GoodsBasket";
+import GoodsBasket from "./components/GoodsBasket/GoodsBasket";
 import UserProfile from "./components/UserProfile/UserProfile";
 function App() {
   return (

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import CartItem from "./CartItem";
 
 export default function GoodsBasket() {
   const [cart, setCart] = useState([
@@ -34,13 +35,7 @@ export default function GoodsBasket() {
       <h1>Корзина товаров</h1>
       <ul>
         {cart.map((item) => {
-          return (
-            <li key={item.id}>
-              {item.title} (Кол-во: {item.count}){" "}
-              <button onClick={() => handleIncreaseCount(item.id)}>+1</button>
-              <button onClick={() => handleRemoveItem(item.id)}>Удалить</button>
-            </li>
-          );
+          return <CartItem listItem={cart} />;
         })}
       </ul>
       <button onClick={handleEmptyBasket}>Очистить корзину</button>
